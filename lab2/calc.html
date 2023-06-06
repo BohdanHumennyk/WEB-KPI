@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Калькулятор</title>
+  <!-- Підключення CSS Bootstrap -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+      <h1>Калькулятор</h1>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="calc.html">Головна</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="settings.html">Налаштування</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1>Калькулятор</h1>
+    <p>Використовуйте цей калькулятор для виконання різноманітних обчислень. Введіть числа та математичні операції у відповідні поля і натисніть кнопку "Розрахувати", щоб отримати результат.</p>
+    <form>
+      <div class="form-group">
+        <label for="number1">Число 1</label>
+        <input type="number" class="form-control" id="number1" placeholder="Введіть перше число">
+      </div>
+      <div class="form-group">
+        <label for="operator">Операція</label>
+        <select class="form-control" id="operator">
+          <option>+</option>
+          <option>-</option>
+          <option>*</option>
+          <option>/</option>
+          <option>√</option>
+          <option>^</option>
+          <option>log</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="number2">Число 2</label>
+        <input type="number" class="form-control" id="number2" placeholder="Введіть друге число">
+      </div>
+      <button type="button" class="btn btn-primary" id="calculateBtn">Розрахувати</button>
+      <div class="form-group">
+        <label for="result">Результат</label>
+        <input type="text" class="form-control" id="result" readonly>
+      </div>
+    </form>
+  </div>
+  
+  <!-- Підключення JS Bootstrap та jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="scripts/model.js"></script>
+  <script src="scripts/view.js"></script>
+  <script src="scripts/controller.js"></script>
+</body>
+</html>
